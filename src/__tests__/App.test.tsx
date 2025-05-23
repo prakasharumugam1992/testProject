@@ -17,7 +17,7 @@ describe('App Component', () => {
     expect(screen.getByTestId('result')).toHaveTextContent('0');
   });
 
-  it('displays 1 when no values are entered', () => {
+  it('displays 1 when 1 with some random text values are entered', () => {
     render(<App />);
     fireEvent.change(screen.getByTestId('inputValue'), { target: { value: '1' } });
     const button = screen.getByText('Add');
@@ -33,7 +33,7 @@ describe('App Component', () => {
     expect(screen.getByTestId('result')).toHaveTextContent('6');
   });
 
-  it('displays erro message when negative values are entered', () => {
+  it('displays error message when negative values are entered', () => {
     render(<App />);
     fireEvent.change(screen.getByTestId('inputValue'), { target: { value: '1\n-5-6' } });
     const button = screen.getByText('Add');
