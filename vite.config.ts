@@ -6,5 +6,6 @@ export default defineConfig({
   build: {
     outDir: 'build' // change from 'dist' to 'build'
   },
+  base:'/testProject/',
   plugins: [react()],
 })
